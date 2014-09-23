@@ -1,0 +1,39 @@
+<div class="row marketing">
+    <form role="form" novalidate ng-submit="process();" name="form">
+
+        <div class="jumbotron">
+            <h1>Contact Numbers</h1>
+        </div>
+        <h4>Your Contact Numbers</h4>
+        <p>
+            Please provide your contact number to us
+        </p>
+
+        <ul class="alert-danger">
+            <li ng-repeat="error in errors">
+                {{error}}
+            </li>
+        </ul>
+
+
+        <div class="form-group">
+            <label for="mobileNumber">Mobile number</label>
+            <input maxlength="10" type="text" class="form-control" id="mobileNumber" ng-model="mobileNumber" ng-required=true
+                   name="mobileNumber"
+                   placeholder="04 or 05"/>
+        </div>
+        <div class="form-group">
+            <label for="altNumber1">Alternative number 1</label>
+            <input maxlength="10" type="text" class="form-control" id="altNumber1" ng-model="altNumber1" ng-required=true
+                   name="altNumber1"/>
+        </div>
+        <div class="form-group">
+            <label for="altNumber2">Alternative number 2</label>
+            <input maxlength="10" type="text" class="form-control" id="altNumber2" ng-model="altNumber2" ng-required=true
+                   name="altNumber2"/>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+
+</div>
